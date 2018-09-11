@@ -59,4 +59,5 @@ def get_conn(a, b):
     :return:
     """
 
-# main()
+print(__name__)
+
