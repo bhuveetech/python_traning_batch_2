@@ -21,7 +21,7 @@ logger = get_logger()
 
 
 # ================= lxml - To parse xml and html files ================= #
-
+# To parse html and xml
 # https://lxml.de/tutorial.html
 import requests
 rs = requests.get("http://google.com")
