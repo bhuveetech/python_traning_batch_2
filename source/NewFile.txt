@@ -1,0 +1,4 @@
+Hello this is new file with 'w' mode
+
+hello	this is in set
+new data with list

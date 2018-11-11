@@ -1,15 +1,10 @@
 """ This module is used to practice comments """
 import argparse
+from util.logger import  get_logger
 
-c = """this module is used
-to"""
-print(c)
-d = "this is module is used " \
-    "to"
-print(d)
+print("Hello this is file",__name__)
 
-
-
+_var = 20
 
 # ====================== Block comment Example =====================
 # The main function will parse arguments via the parser variable.  These
@@ -31,6 +26,8 @@ def main():
     )
 
     cmd_options = parser.parse_args()
+    # cmd_options.word
+    # cmd_options.file
     print(cmd_options)
 
     fp = open(cmd_options.filename, "w") # open a file in write mode
@@ -51,7 +48,8 @@ def get_db_conn(host_name, db, user, db_pass):
     """
     pass
 
-def get_conn(a, b):
+
+def _get_conn(a, b):
     """
 
     :param a:
@@ -59,5 +57,21 @@ def get_conn(a, b):
     :return:
     """
 
-print(__name__)
+# print(__name__)
 
+# __variable__  # Inbuilt variable
+# _variable     # Private variable
+# __variable    # Protected variable
+
+
+if __name__ == "__main__":
+    import unittest
+    print("Importing comments.py")
+    # logger = get_logger()
+    c = """this module is used
+    to"""
+    # logger.info(c)
+    d = "this is module is used " \
+        "to"
+    # logger.info(d)
+    main()

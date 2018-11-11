@@ -1,0 +1,3 @@
+This is new file with 'w+' mode
+This is new data with 'r+' mode
+ Hello new data from 'a' mode

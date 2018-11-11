@@ -1,0 +1,3 @@
+Hello this is new file with 'a' mode
+
+ Hello this is existing file with 'a+'

@@ -5,181 +5,164 @@ import logging
 import comments
 import subprocess
 import pprint
+from util.logger import get_logger
 
-# create logger
-logger = logging.getLogger("simple_example")
-logger.setLevel(logging.DEBUG)
-# create console handler and set level to debug
-ch = logging.StreamHandler()
-fh = logging.FileHandler("python_training.log")
-ch.setLevel(logging.DEBUG)
-fh.setLevel(logging.DEBUG)
-
-# create formatter
-formatter = logging.Formatter("%(asctime)s- %(levelname)s - %(filename)s-%(lineno)s - %(message)s")
-# add formatter to ch
-ch.setFormatter(formatter)
-fh.setFormatter(formatter)
-# add ch to logger
-logger.addHandler(ch)
-logger.addHandler(fh)
-
+logger = get_logger()
 # logger.debug(dir("python"))
 # logger.debug(dir(str))
 
 # logger.debug(help(str.join))
 
 
-# logger.debug("welcome to python".capitalize())
-# logger.debug("python".istitle())
-# logger.debug("python".islower())
-# logger.debug("The converted message %s","welcome to python".title())
-#
-# logger.debug("python".isalpha())
-#
-# user_input = "123s"
-# logger.debug(user_input.isdecimal())
-#
-# logger.debug("123".isdecimal())
-#
-# logger.debug(user_input.isalnum())
-#
-# logger.debug("python".isspace())
-# logger.debug("\n".isspace())
-# logger.debug("\t".isspace())
-# logger.debug(" ".isspace())
-#
-# up_var = "python".upper()
-# low_var = up_var.lower()
-# logger.debug(up_var.isupper())
-# logger.debug(low_var.islower())
-#
-#
-# logger.debug("python".swapcase())
-# logger.debug("Python".swapcase())
-#
-# logger.debug("python".endswith("hon"))
-# logger.debug("python".startswith("pyt"))
+logger.debug("welcome to python".capitalize())
+logger.debug("python".istitle())
+logger.debug("python".islower())
+logger.debug("The converted message %s","welcome to python".title())
+
+logger.debug("python".isalpha())
+
+user_input = "123s"
+logger.debug(user_input.isdecimal())
+
+logger.debug("123".isdecimal())
+
+logger.debug(user_input.isalnum())
+
+logger.debug("python".isspace())
+logger.debug("\n".isspace())
+logger.debug("\t".isspace())
+logger.debug(" ".isspace())
+
+up_var = "python".upper()
+low_var = up_var.lower()
+logger.debug(up_var.isupper())
+logger.debug(low_var.islower())
+
+
+logger.debug("python".swapcase())
+logger.debug("Python".swapcase())
+
+logger.debug("python".endswith("hon"))
+logger.debug("python".startswith("pyt"))
 
 
 ## split, splitlines, rsplit, strip, lstrip, rstrip, join, find,rfind, index,rindex, replace
 logger.info(dir(str))
-# logger.info(dir(comments))
-# # logger.info(help(comments))
-# logger.info(help(comments.get_db_conn))
-#logger.info(help(str.split))
+logger.info(dir(comments))
+# logger.info(help(comments))
+logger.info(help(comments.get_db_conn))
+logger.info(help(str.split))
 
-# message = "welcome to python"
-# logger.info(message.split())
-# logger.info(message.split(maxsplit=1))
-# ip_address = "127.0.0.1"
-# #             012345678
-# list_of_octal = ip_address.split(".")
-# logger.info(list_of_octal)
-# file_name = "test.py"
-# #            0123456
-# logger.info(file_name.split("."))
-# logger.info(file_name.split(".")[0])
-#
-# logger.info(message.rsplit(maxsplit=1))
-#
-# logger.info(ip_address.split(sep='.',maxsplit=1))  # 127 0.0.1
-# logger.info(ip_address.rsplit(sep='.',maxsplit=1))  # 127.0.0  1
-#
-# logger.info(file_name.strip("py."))
-#
-# message1 = "0010hello world 0000"
-# logger.info(message1.strip('0'))
-# logger.info(message1.lstrip('0'))
-# logger.info(message1.rstrip('0'))
-#
-# server_message = "\n hello this is messgae in server\n"
-# logger.info(server_message.strip())
-#
-# logger.info(file_name.find(".py"))  # 4
-# logger.info(file_name.find(".txt"))  # -1
-#
-# logger.info(file_name.index(".py"))  # 4
-# # logger.info(file_name.index(".txt"))
-# if file_name.find(".py")!=-1:
-#     print("file is python file")
-# else:
-#     print("Not python file")
-#
-#
-# logger.info(ip_address.find("."))
-# logger.info(ip_address.rfind("."))
-# logger.info(ip_address.index("."))
-# logger.info(ip_address.rindex("."))
-#
-#
-# different_message = ["Welcome to python", "Welcome to Java", "Welcome to scala"]
-# # slicing with rfind
-# for message in different_message:
-#     logger.info(message[message.rfind(" ")+1:])
-#
-# logger.info(different_message[0].rfind(" "))
-# logger.info(different_message[0].find(" "))
-#
-#
-# message5 = "Hello this is Network message \n from Ip address 127.0.0.1"
-# logger.info(message5.splitlines())
+message = "welcome to python"
+logger.info(message.split())
+logger.info(message.split(maxsplit=1))
+ip_address = "127.0.0.1"
+#             012345678
+list_of_octal = ip_address.split(".")
+logger.info(list_of_octal)
+file_name = "test.py"
+#            0123456
+logger.info(file_name.split("."))
+logger.info(file_name.split(".")[0])
 
-# output = subprocess.getoutput("dir")
-# logger.info(output)
-# logger.info(output.splitlines())
-# #
-# logger.info("{form} Finding python files {form}".format(form="="*12))
-# for line in output.splitlines():
-#     # print(line)
-#     if line.find(".py")!=-1:
-#         logger.info(line)
+logger.info(message.rsplit(maxsplit=1))
+
+logger.info(ip_address.split(sep='.',maxsplit=1))  # 127 0.0.1
+logger.info(ip_address.rsplit(sep='.',maxsplit=1))  # 127.0.0  1
+
+logger.info(file_name.strip("py."))
+
+message1 = "0010hello world 0000"
+logger.info(message1.strip('0'))
+logger.info(message1.lstrip('0'))
+logger.info(message1.rstrip('0'))
+
+server_message = "\n hello this is messgae in server\n"
+logger.info(server_message.strip())
+
+logger.info(file_name.find(".py"))  # 4
+logger.info(file_name.find(".txt"))  # -1
+
+logger.info(file_name.index(".py"))  # 4
+# logger.info(file_name.index(".txt"))
+if file_name.find(".py")!=-1:
+    print("file is python file")
+else:
+    print("Not python file")
+
+logger.info(ip_address.find("."))
+logger.info(ip_address.rfind("."))
+logger.info(ip_address.index("."))
+logger.info(ip_address.rindex("."))
 
 
-# Fina a hell_world.py file then execute it using subprocess
+different_message = ["Welcome to python", "Welcome to Java", "Welcome to scala"]
+# slicing with rfind
+for message in different_message:
+    logger.info(message[message.rfind(" ")+1:])
 
-# list_of_ips = ["127.0.0.1","10.0.0.2","10.3.4.5"]
+logger.info(different_message[0].rfind(" "))
+logger.info(different_message[0].find(" "))
 
-# help(str.join)
 
-# logger.info("\n".join(list_of_ips))
+message5 = "Hello this is Network message \n from Ip address 127.0.0.1"
+logger.info(message5.splitlines())
 
-# "127.0.0.1\n10.0.0.2\n10.3.4.5"
+output = subprocess.getoutput("dir")
+logger.info(output)
+logger.info(output.splitlines())
+#
+logger.info("{form} Finding python files {form}".format(form="="*12))
+for line in output.splitlines():
+    # print(line)
+    if line.find(".py")!=-1:
+        logger.info(line)
+#
+#
+# # Fina a hell_world.py file then execute it using subprocess
+#
+list_of_ips = ["127.0.0.1","10.0.0.2","10.3.4.5"]
 
-# ip_addr = "127.0.0.1"
-# list_of_octal = ip_addr.split(".")
-# logger.info(list_of_octal)
-# list_of_octal[0] = "10"
-# logger.info(list_of_octal)
-# logger.info(".".join(list_of_octal))
+help(str.join)
+
+logger.info("\n".join(list_of_ips))
+#
+# # "127.0.0.1\n10.0.0.2\n10.3.4.5"
+#
+ip_addr = "127.0.0.1"
+list_of_octal = ip_addr.split(".")
+logger.info(list_of_octal)
+list_of_octal[0] = "10"
+logger.info(list_of_octal)
+logger.info(".".join(list_of_octal))
 
 
 # Find your machine ip address using subprocess module. ipconfig .. ifconfig
 # subprocess
 
 ip_addr = "127.0.0.1"
-# list_of_octal = ip_addr.split(".")
-# logger.info(list_of_octal)
+list_of_octal = ip_addr.split(".")
+logger.info(list_of_octal)
 new_ip_addr =ip_addr.replace("127","10")
-# logger.info(list_of_octal)
-# logger.info(".".join(list_of_octal))
-# logger.info("NewIP address: {new_ip} OldIp address:{old_ip}".format(new_ip=new_ip_addr,
-#                                                                     old_ip=ip_addr))
-#
-# logger.info(ip_addr.replace(".",":",3))
-# logger.info(ip_addr.replace(".",":",1))
-#
-# logger.info(dir(str))
+logger.info(list_of_octal)
+logger.info(".".join(list_of_octal))
+logger.info("NewIP address: {new_ip} OldIp address:{old_ip}".format(new_ip=new_ip_addr,
+                                                                    old_ip=ip_addr))
+
+logger.info(ip_addr.replace(".",":",3))
+logger.info(ip_addr.replace(".",":",1))
+
+logger.info(dir(str))
 
 
-# logger.info(ip_addr.replace(".",":",ip_addr.count(".")))
-# # count, center, ljust, rjust, zfill
-# logger.info(ip_addr.ljust(20,"x"))
-# logger.info(ip_addr.rjust(20,'x'))
-# logger.info(ip_addr.center(20,'x'))
-# logger.info(ip_addr.zfill(20))
-#
-# logger.info(ip_addr.center(20))
+logger.info(ip_addr.replace(".",":",ip_addr.count(".")))
+# count, center, ljust, rjust, zfill
+logger.info(ip_addr.ljust(20,"x"))
+logger.info(ip_addr.rjust(20,'x'))
+logger.info(ip_addr.center(20,'x'))
+logger.info(ip_addr.zfill(20))
+
+logger.info(ip_addr.center(20))
 
 
 # ================== Tuple ======================= #
@@ -189,18 +172,18 @@ new_ip_addr =ip_addr.replace("127","10")
 # logger.info(help(tuple.count))
 
 list_of_names = ("xyz", "yz", "zz","xyz", "mm", 12, 234)
-# logger.info(list_of_names.count("xyz"))
-#
-# logger.info(list_of_names.count("zz"))
-#
-# logger.info(list_of_names.count(2000))
+logger.info(list_of_names.count("xyz"))
 
-# logger.info(help(tuple.index))
+logger.info(list_of_names.count("zz"))
 
-# logger.info(list_of_names.index("mm")) # 4
-#
-# # logger.info(list_of_names.index('2345'))
-# logger.info(list_of_names.index("mm",0,5))
+logger.info(list_of_names.count(2000))
+
+logger.info(help(tuple.index))
+
+logger.info(list_of_names.index("mm")) # 4
+
+# logger.info(list_of_names.index('2345'))
+logger.info(list_of_names.index("mm",0,5))
 
 
 # ======================== List =========================== #
