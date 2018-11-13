@@ -1,0 +1,13 @@
+*** Settings ***
+Documentation     Simple example using SeleniumLibrary.
+Library           WebUiLib
+
+*** Variables ***
+${URL}      http://localhost:5000
+${BROWSER}        Chrome
+
+*** Test Cases ***
+Test Get Task
+    Open Browser    ${URL}  ${BROWSER}
+    get_tasks
+    [Teardown]    Close Browser
