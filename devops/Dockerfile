@@ -5,14 +5,12 @@ FROM python:3.6.5-slim
 WORKDIR /app
 
 # add the current directory to the container as /app
-ADD ./ /app
+COPY requirements.txt  /tmp/requirements.txt
 
-RUN ls -l
-
-RUN pwd
+COPY ../source/TestApplication /app
 
 # execute everyone's favorite pip command, pip install -r
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
+RUN pip install --trusted-host pypi.python.org -r /tmp/requirements.txt
 
 # unblock port 80 for the Flask app to run on
 EXPOSE 80
