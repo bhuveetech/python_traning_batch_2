@@ -5,7 +5,7 @@ FROM python:3.6.5-slim
 WORKDIR /app
 
 # add the current directory to the container as /app
-ADD ../source/TestApplication /app
+ADD ./source/TestApplication /app
 
 # execute everyone's favorite pip command, pip install -r
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
