@@ -1,0 +1,10 @@
+*** Settings ***
+Documentation     Simple example using requests.
+Library           ApiTestLib
+
+*** Variables ***
+${URL}      http://localhost:5000
+
+*** Test Cases ***
+Test Get Task
+    get tasks   ${URL}  /todo/api/v1.0/tasks/1
