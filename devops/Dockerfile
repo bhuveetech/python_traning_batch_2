@@ -7,8 +7,9 @@ WORKDIR /app
 # add the current directory to the container as /app
 COPY requirements.txt  /tmp/requirements.txt
 
-COPY ../source/TestApplication /app
+ADD TestApplication/ /app
 
+RUN ls -l
 # execute everyone's favorite pip command, pip install -r
 RUN pip install --trusted-host pypi.python.org -r /tmp/requirements.txt
 
