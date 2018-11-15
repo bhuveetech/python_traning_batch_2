@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20181113 13:47:09.882">
+<suite id="s1" name="ApiTests" source="C:\Users\Naresh\PycharmProjects\python_traning_batch_2\tests\functional_tests\ApiTests.txt">
+<test id="s1-t1" name="Test Get Task">
+<kw name="Get Tasks" library="ApiTestLib">
+<arguments>
+<arg>${URL}</arg>
+<arg>/todo/api/v1.0/tasks/1</arg>
+</arguments>
+<msg timestamp="20181113 13:47:11.405" level="INFO">200
+{'task': {'description': 'Milk, Cheese, Pizza, Fruit, Tylenol',
+          'done': False,
+          'id': 1,
+          'title': 'Buy groceries'}}</msg>
+<status status="PASS" starttime="20181113 13:47:10.370" endtime="20181113 13:47:11.406"></status>
+</kw>
+<status status="PASS" starttime="20181113 13:47:10.368" endtime="20181113 13:47:11.407" critical="yes"></status>
+</test>
+<doc>Simple example using requests.</doc>
+<status status="PASS" starttime="20181113 13:47:09.894" endtime="20181113 13:47:11.412"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="ApiTests">ApiTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
