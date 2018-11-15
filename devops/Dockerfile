@@ -5,7 +5,9 @@ FROM python:3.6.5-slim
 WORKDIR /app
 
 # add the current directory to the container as /app
-COPY "C:\Users\Naresh\PycharmProjects\python_traning_batch_2\source\TestApplication" /app
+ADD . /app
+
+RUN ls -l
 
 # execute everyone's favorite pip command, pip install -r
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
