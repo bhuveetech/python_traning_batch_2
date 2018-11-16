@@ -14,7 +14,7 @@ RUN ls -l
 RUN pip install --trusted-host pypi.python.org -r /tmp/requirements.txt
 
 # unblock port 80 for the Flask app to run on
-EXPOSE 80
+EXPOSE 5000
 
 # execute the Flask app
 CMD ["python", "app.py"]
