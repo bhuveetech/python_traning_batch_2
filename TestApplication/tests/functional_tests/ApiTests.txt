@@ -3,7 +3,7 @@ Documentation     Simple example using requests.
 Library           ApiTestLib
 
 *** Variables ***
-${URL}      http://localhost:5000
+${URL}      http://192.168.99.100:5000
 
 *** Test Cases ***
 Test Get Task
